@@ -1,0 +1,72 @@
+\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[francais]{babel}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{color}
+\usepackage{framed}
+\usepackage{marvosym}
+\usepackage{pifont}
+\usepackage[top=2cm, bottom=2cm, left=2cm, right=2cm]{geometry}
+\usepackage{listings}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{verbatim}
+\usepackage{moreverb}
+\usepackage{titletoc}
+\usepackage{soul}
+\usepackage{titlesec}
+\usepackage[tikz]{bclogo}
+
+\definecolor{oxf}{RGB}{0, 33, 71}
+\definecolor{or}{RGB}{239, 155, 15}
+\definecolor{vert}{RGB}{135,167,103}
+\definecolor{rouge}{RGB}{181,39,39}
+\definecolor{violet}{RGB}{64,9,90}
+\definecolor{ciel}{RGB}{81, 136, 255}
+\definecolor{carm}{RGB}{226, 97, 86}
+
+\newcommand{\Ingred}[2]{
+\definecolor{shadecolor}{gray}{0.9}
+\begin{leftbar}
+\begin{shaded}
+ \textbf{\textit{\ding{161} Liste des ingrédients :}} \textbf{\textit{#1}}
+\end{shaded}
+#2
+\end{leftbar}
+\bigskip
+}
+
+\renewcommand\bcStyleTitre[1]{}
+\renewcommand\logowidth{14pt}
+\renewcommand\bcStyleTitre[1]{\hfill\textbf{\textit{\Large \textcolor{white}{#1}}}\hfill}
+
+\newcommand{\Recet}[5]{
+\begin{minipage}[c]{\linewidth}
+\addcontentsline{toc}{section}{#1}
+\begin{bclogo}[logo=\bccoeur, epBord=1.2, couleur=violet, arrondi=0.1, ombre=false, barre =motif ,motifBarre = ]{#1}
+\end{bclogo}
+
+\bigskip
+\begin{minipage}[c]{0.28\linewidth}
+\textbf{#2}\\
+\textit{#3}\\
+#4
+\end{minipage}
+\hspace{0.5em}
+\begin{minipage}[c]{0.65\linewidth}
+\begin{leftbar}
+#5
+\end{leftbar}
+\end{minipage}
+\end{minipage}
+}
+
+\makeatletter
+\renewcommand\section{\@startsection {section}{1}{\z@}%
+                                   {-3.5ex \@plus -1ex \@minus -.2ex}%
+                                   {2.3ex \@plus.2ex}%
+                                   {\fontfamily{pzc}\selectfont\centering\LARGE\bfseries}}
+\makeatother
+
+\newcommand{\Partie}[1]{\newpage \vspace*{\fill} \part{#1} \newpage}

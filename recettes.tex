@@ -1,0 +1,34 @@
+\documentclass{article}
+\input{preambule}
+
+\hypersetup{colorlinks=true, urlcolor=bleu, linkcolor=black}
+
+%Def = Definition
+%Theo = Théorème
+%Prop = Propriété
+%Coro = Corollaire
+%Lem = Lemme
+
+\title{Les délicieuses recettes de papi Vieira}
+
+\begin{document}
+\titleformat{\part}[block]{\fontfamily{pzc}\bfseries\Huge\filcenter}{}{1em}{}[\vspace*{\fill}]
+\setcounter{secnumdepth}{0}
+\maketitle
+\tableofcontents
+\renewcommand{\labelitemi}{$\bullet$}
+
+\Partie{Entr\'ees}
+\newpage
+\input{entrees}
+
+\Partie{Plats}
+\newpage
+\input{plats}
+
+\Partie{Desserts}
+\input{desserts}
+
+\Partie{Annexe}
+\input{annexe}
+\end{document}
